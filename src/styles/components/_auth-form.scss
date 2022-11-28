@@ -1,0 +1,31 @@
+.form {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 360px;
+
+  &__box {
+    display: grid;
+    padding: rem(75) rem(40) rem(40);
+    background-color: rgba(#fff, 0.8);
+    box-shadow: rgba(#000, 0.22) 0 8px 65px;
+    backface-visibility: visible;
+    backdrop-filter: blur(10px);
+    animation: flipInForm 1s cubic-bezier(0.1, 0.41, 0.33, 1.23) forwards, changeFormBgColor 1s 1.5s forwards;
+  }
+
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: rem(35);
+    color: $grey-2;
+    font-size: 15px;
+  }
+
+  &__submit {
+    margin-top: rem(20);
+  }
+}

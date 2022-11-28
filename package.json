@@ -1,0 +1,33 @@
+{
+  "name": "support-your-app-test-work",
+  "version": "1.0.0",
+  "description": "SupportYourApp test work by Dmytro Kurhan",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "Dmytro Kurhan",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "del": "^5.0.0",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "path": "^0.12.7",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

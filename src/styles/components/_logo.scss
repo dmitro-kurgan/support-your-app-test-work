@@ -1,0 +1,96 @@
+$logoElements: (
+  "1": (
+    "top": rem(16),
+    "right": null,
+    "bottom": null,
+    "left": rem(30),
+    "bgColor": #f8911d,
+    "animationName": flipInElem1,
+  ),
+  "2": (
+    "top": rem(28),
+    "right": rem(30),
+    "bottom": null,
+    "left": null,
+    "bgColor": #d0369e,
+    "animationName": flipInElem2,
+  ),
+  "3": (
+    "top": null,
+    "right": null,
+    "bottom": rem(28),
+    "left": rem(30),
+    "bgColor": #3e9ffd,
+    "animationName": flipInElem3,
+  ),
+  "4": (
+    "top": null,
+    "right": rem(30),
+    "bottom": rem(16),
+    "left": null,
+    "bgColor": #4ebf49,
+    "animationName": flipInElem4,
+  )
+);
+
+$logo-size: rem(100);
+$logo-elem-size: rem(28);
+$logo-animation-duration: 1s;
+$logo-border-size: $border-radius-base * 2;
+
+.logo {
+  @include absolute($top: calc(-#{$logo-size} / 2), $right: 0, $left: 0);
+
+  z-index: 1;
+
+  @include size($logo-size);
+
+  margin: auto;
+
+  &__bg {
+    @include absolute($top: 0, $right: 0, $bottom: 0, $left: 0);
+    @include size(100%);
+
+    background-color: #fff;
+    border-radius: $logo-border-size;
+    box-shadow: rgba(#000, 0.07) 0 6px 24px;
+    backface-visibility: visible;
+    animation: flipInLogo cubic-bezier(0.43, 0.5, 0.81, 0.87) $logo-animation-duration forwards;
+  }
+
+  &__bg::before {
+    @include absolute($top: 0, $right: 0, $bottom: 0, $left: 0);
+
+    z-index: 1;
+
+    @include size(100%, 50%);
+
+    border-radius: $logo-border-size $logo-border-size 0 0;
+    animation: changeLogoBgColor 0.3s $logo-animation-duration forwards;
+    content: "";
+  }
+
+  &__elem {
+    position: absolute;
+    z-index: 1;
+
+    @include size($logo-elem-size);
+
+    border-radius: 6px;
+    backface-visibility: visible;
+    animation-timing-function: cubic-bezier(0.17, 1, 0.8, 1.01);
+    animation-duration: $logo-animation-duration;
+    animation-fill-mode: forwards;
+
+    @each $key, $value in $logoElements {
+      &:nth-child(#{$key}) {
+        top: map-deep-get($logoElements, $key, "top");
+        right: map-deep-get($logoElements, $key, "right");
+        bottom: map-deep-get($logoElements, $key, "bottom");
+        left: map-deep-get($logoElements, $key, "left");
+        background-color: map-deep-get($logoElements, $key, "bgColor");
+        animation-name: map-deep-get($logoElements, $key, "animationName");
+      }
+    }
+  }
+}

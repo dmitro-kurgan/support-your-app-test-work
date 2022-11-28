@@ -1,0 +1,99 @@
+$logo-elem-opacity: 0.85;
+
+@keyframes flipInForm {
+  from {
+    transform: perspective(1000px) rotate3d(1, 0, 0, -90deg) translate3d(0, 0, -90px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    transform: perspective(1000px);
+  }
+}
+
+@keyframes flipInLogo {
+  from {
+    transform: perspective(200px) rotate3d(1, 0, 0, 60deg) translate3d(0, 0, 27px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    transform: perspective(200px);
+  }
+}
+
+@keyframes flipInElem1 {
+  from {
+    transform: perspective(30px) rotate3d(1, 0, 0, 40deg) translate3d(-24px, -60px, 40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: perspective(100px);
+    opacity: $logo-elem-opacity;
+  }
+}
+
+@keyframes flipInElem2 {
+  from {
+    transform: perspective(30px) rotate3d(1, 0, 0, 60deg) translate3d(8px, -36px, 36px);
+    opacity: 0;
+  }
+
+  to {
+    transform: perspective(100px);
+    opacity: $logo-elem-opacity;
+  }
+}
+
+@keyframes flipInElem3 {
+  from {
+    transform: perspective(30px) rotate3d(1, 0, 0, 60deg) translate3d(-8px, -36px, 36px);
+    opacity: 0;
+  }
+
+  to {
+    transform: perspective(100px);
+    opacity: $logo-elem-opacity;
+  }
+}
+
+@keyframes flipInElem4 {
+  from {
+    transform: perspective(30px) rotate3d(1, 0, 0, 40deg) translate3d(24px, -60px, 40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: perspective(100px);
+    opacity: $logo-elem-opacity;
+  }
+}
+
+@keyframes changeLogoBgColor {
+  from {
+    background-color: #fff;
+  }
+
+  to {
+    background-color: rgba($grey-4, 0.6);
+  }
+}
+
+@keyframes changeFormBgColor {
+  from {
+    background-color: #fff;
+  }
+
+  to {
+    background-color: rgba(#fff, 0.7);
+  }
+}

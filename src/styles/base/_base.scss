@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+
+  @include mq("tablet") {
+    font-size: 14px;
+  }
+
+  @include mq("phone") {
+    font-size: 12px;
+  }
+}
+
+body {
+  min-width: $app-min-width;
+  font-weight: 300;
+  font-family: 'HelveticaNeue', Arial, sans-serif;
+  background-color: $grey-4;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0 15px;
+}
+
+.background {
+  @include absolute($top: 0, $right: 0, $bottom: 0, $left: 0);
+  @include size(100%);
+
+  background-size: cover;
+  background-blend-mode: darken;
+  opacity: 0;
+  transition: background 1s, opacity 1s;
+}

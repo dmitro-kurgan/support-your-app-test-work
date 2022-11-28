@@ -1,0 +1,27 @@
+// Colors
+$primary-accent: #3e9ffd;
+$grey-1: #636363;
+$grey-2: #787b79;
+$grey-3: #b2b2b2;
+$grey-4: #d8dce2;
+//
+
+$app-min-width: 320px;
+$border-radius-base: 12px;
+
+// Breakpoints
+$breakpoints: (
+  "app-min-width": $app-min-width,
+  "phone": 576px,
+  "tablet-small": 768px,
+  "tablet": 992px,
+  "desktop": 1200px,
+);
+
+// Width sizes of container
+$container-widths: (
+  "phone": 540px,
+  "tablet-small": 720px,
+  "tablet": 960px,
+  "desktop": 1152px,
+);
