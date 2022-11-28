@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $logoElements: (
   "1": (
     "top": rem(16),
@@ -55,7 +57,9 @@ $logo-border-size: 16px;
     border-radius: $logo-border-size;
     box-shadow: rgba(#000, 0.07) 0 6px 24px;
     backface-visibility: visible;
-    animation: flipInLogo cubic-bezier(0.43, 0.5, 0.81, 0.87) $logo-animation-duration forwards;
+    animation:
+      flipInLogo cubic-bezier(0.43, 0.5, 0.81, 0.87) $logo-animation-duration forwards,
+      fadeIn #{math.div($logo-animation-duration, 2)} forwards;
   }
 
   &__bg::before {

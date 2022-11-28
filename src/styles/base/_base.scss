@@ -39,7 +39,8 @@ body {
   @include size(100%);
 
   background-size: cover;
-  background-blend-mode: darken;
   opacity: 0;
+  background-blend-mode: darken;
   transition: background 1s, opacity 1s;
+  animation: fadeIn 1s $start-animation-delay forwards;
 }

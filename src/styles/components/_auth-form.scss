@@ -1,3 +1,7 @@
+@use 'sass:math';
+
+$form-animation-duration: 1s;
+
 .form {
   position: relative;
   z-index: 1;
@@ -11,7 +15,10 @@
     box-shadow: rgba(#000, 0.22) 0 8px 65px;
     backface-visibility: visible;
     backdrop-filter: blur(10px);
-    animation: flipInForm 1s cubic-bezier(0.1, 0.41, 0.33, 1.23) forwards, changeFormBgColor 1s 1.5s forwards;
+    animation:
+      flipInForm $form-animation-duration cubic-bezier(0.1, 0.41, 0.33, 1.23) forwards,
+      fadeIn #{math.div($form-animation-duration, 2)} forwards,
+      changeFormBgColor 1s $start-animation-delay forwards;
   }
 
   &__title,

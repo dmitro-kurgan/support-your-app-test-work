@@ -7,7 +7,6 @@ const src = './images/';
 const block = document.getElementById('bgImage');
 const handler = setInterval(carousel, 10000);
 const countEnd = 6;
-const startDelay = 1500;
 let count = 0;
 let imageIndex;
 
@@ -27,10 +26,6 @@ function carousel() {
   localStorage.setItem('image', imageIndex);
 
   if (block) {
-    setTimeout(function () {
-      block.style.opacity = '1';
-    }, startDelay);
-
     block.style.background = `url("${src}${images[imageIndex]}") no-repeat center center fixed`;
     block.style.backgroundSize = 'cover';
   }

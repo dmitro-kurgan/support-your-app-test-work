@@ -3,11 +3,6 @@ $logo-elem-opacity: 0.85;
 @keyframes flipInForm {
   from {
     transform: perspective(1000px) rotate3d(1, 0, 0, -90deg) translate3d(0, 0, -90px);
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
   }
 
   to {
@@ -18,11 +13,6 @@ $logo-elem-opacity: 0.85;
 @keyframes flipInLogo {
   from {
     transform: perspective(200px) rotate3d(1, 0, 0, 60deg) translate3d(0, 0, 27px);
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
   }
 
   to {
@@ -95,5 +85,15 @@ $logo-elem-opacity: 0.85;
 
   to {
     background-color: rgba(#fff, 0.7);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
