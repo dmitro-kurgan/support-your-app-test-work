@@ -36,7 +36,7 @@ $logoElements: (
 $logo-size: rem(100);
 $logo-elem-size: rem(28);
 $logo-animation-duration: 1s;
-$logo-border-size: $border-radius-base * 2;
+$logo-border-size: 16px;
 
 .logo {
   @include absolute($top: calc(-#{$logo-size} / 2), $right: 0, $left: 0);
